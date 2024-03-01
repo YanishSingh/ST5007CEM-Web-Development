@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap");
+
+body {
+    background: #f9f9f9;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Add a subtle border-radius to elements */
+.shadow {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10px;
+}
+
+.profile-tab-nav {
+    min-width: 250px;
+}
+
+.tab-content {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Update the styles for navigation links */
+.nav-pills a.nav-link {
+    padding: 15px 20px;
+    border-bottom: 1px solid transparent;
+    border-radius: 8px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Add hover effect to navigation links */
+.nav-pills a.nav-link:hover {
+    background-color: #f0f0f0;
+    border-color: #ddd;
+}
+
+/* Update the styles for circular images */
+.img-circle img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%; /* Use 50% for circular shape */
+    border: 5px solid #fff;
+    transition: all 0.3s ease;
+}
+
+/* Add hover effect to circular images */
+.img-circle img:hover {
+    transform: scale(1.05); /* Scale up image on hover */
+}

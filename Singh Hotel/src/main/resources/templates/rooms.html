@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="Bootstrap/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="Bootstrap/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" th:href="@{~/css/home_navigationStyle.css}">
+    <link rel="stylesheet" th:href="@{~/css/rooms.css}">
+    <link rel="stylesheet" th:href="@{~/css/footerStyle.css}">
+    <link rel="shortcut icon" type="x-icon" th:href="@{/images/logo.png}">
+
+    <title>Rooms</title>
+</head>
+<body>
+<div th:replace="fragments/Navi_frag.html :: navigator"></div>
+        <div class="Main-Wrapper">
+            <div class="Wrapper-top">
+                <div class="top-left">
+                    <h3>Luxurious Accommodations Await You!</h3>
+                </div>
+                <div class="top-right">
+                   <p>Welcome to our rooms page, where comfort meets elegance. Our meticulously curated selection of hotel rooms caters to every need and preference, ensuring an unforgettable stay. Whether you're a solo traveler, a couple seeking a romantic getaway, or a family on vacation, we have the perfect room for you. Each room is thoughtfully furnished with modern amenities and stylish decor, providing a relaxing haven after a day of exploration. From intimate suites to spacious penthouses, our diverse range of accommodations offers something for everyone. Book your stay with us today and experience the epitome of luxury and hospitality. </p>
+                </div>
+
+            </div>
+            <div class="Wrapper-bottom">
+                <div class="bottom-up">
+                    <button><a th:href="@{~/rooms/coupleroom}">Couple Room</a></button>
+                </div>
+                <div class="bottom-up1">
+                    <button><a th:href="@{~/rooms/luxeroom}">Single Room</a></button>
+                </div>
+                <div class="bottom-up2">
+                    <button><a th:href="@{~/rooms/familyroom}">Family Room</a></button>
+                </div>
+                <div class="bottom-up3">
+                    <button><a  th:href="@{~/rooms/masterroom}">Suite Room</a></button>
+                </div>
+                <div class="bottom-up4">
+                    <button><a th:href="@{~/rooms/premiumroom}">Honeymoon Room</a></button>
+                </div>
+            </div>
+
+
+            <div class="wrapper-botton-bottom">
+                <div class="first">
+
+                </div>
+                <div class="second">
+
+                </div>
+                <div class="third">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    <div th:replace="fragments/Footer_frag.html :: footer"></div>
+
+    </body>
+    <script>
+        let myPage = "rooms";
+        let listGroupItem = Array.from(document.getElementsByClassName("list-group-item"));
+        listGroupItem.forEach(i=>{
+            i.classList.remove("active")
+        })
+        let activeID = document.getElementById(myPage);
+        activeID.classList.add("active");
+    </script>
+
+    <script>
+        const revBtn = document.querySelector(".rev-btn");
+        const btn=document.querySelector(".btn");
+        const post=document.querySelector(".post");
+        const rating=document.querySelector(".star_rating");
+        revBtn.onclick = () => {
+            rating.style.display = "block";
+            return false;
+        }
+
+    </script>
+
+</html>

@@ -1,0 +1,113 @@
+:root {
+    --primary: #ff851b;
+    --secondary: #ff851b ;
+    --white: #ffffff;
+    --black: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+footer {
+    background-color: #ff851b;
+    color: var(--white);
+    margin-top: 5px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .information {
+    width: 25%;
+}
+
+footer .quicklinks {
+    width: 25%;
+    text-transform: capitalize;
+}
+
+footer .sociallinks {
+    width: 25%;
+    text-transform: capitalize;
+}
+
+footer .emailcontact {
+    width: 25%;
+    text-transform: capitalize;
+}
+
+.information img {
+    width: 80px;
+}
+
+.information p a,
+.quicklinks p a {
+    padding: 2px;
+    color: var(--white);
+}
+
+.sociallinks h4 {
+    padding: 3px;
+}
+
+.sociallinks h4 a {
+    color: var(--white);
+}
+
+.email {
+    width: 90%;
+    height: 35px;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 5px;
+    width: 70%;
+    display: flex;
+    border: 3px solid var(--black);
+    margin: auto;
+}
+
+.emailcontact input {
+    padding-top: 5px;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--white);
+    color: var(--black);
+    background: transparent;
+    border: 0px;
+    outline: none;
+}
+
+.email button {
+    background-color: var(--white);
+    color: var(--black);
+    height: 100%;
+    font-size: 10px;
+    border: 0px;
+    background: transparent;
+}
+
+.email button a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+@media (max-width: 858px) {
+    footer {
+        flex-direction: column;
+    }
+    footer .information,
+    footer .quicklinks,
+    footer .sociallinks,
+    footer .emailcontact {
+        width: 100%;
+        text-align: center;
+        margin: 20px;
+    }
+}

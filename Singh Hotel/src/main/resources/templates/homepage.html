@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <title>Singh Hotel</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="shortcut icon" type="x-icon" th:href="@{/images/logo.png}">
+  <link rel="stylesheet" th:href="@{~/css/footerStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/home_navigationStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/HomepageStyle.css}">
+  <link rel="stylesheet" th:href="@{~/css/checkOffer.css}">
+
+  <style>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+    }
+
+    .image .cover h3,
+    .image .cover h5 {
+      color: black;
+    }
+
+    #btn {
+      width: 150px;
+      height: 39px;
+      margin-top: 15px;
+      background: white;
+      color: #0a0a0a;
+      border-radius: 9px;
+      font-weight: bold;
+      border: none;
+      transition: 0.5s ease;
+      cursor: pointer;
+    }
+
+    #btn:hover {
+      background: #ff851b;
+      color: white;
+    }
+
+    /* Overlay styles */
+    .rooms {
+      position: relative;
+    }
+
+    .rooms .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: opacity 0.3s;
+    }
+
+    .rooms:hover .overlay {
+      opacity: 1;
+    }
+
+    .room-name {
+      color: white;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+<section>
+  <div th:replace="fragments/Navi_frag.html :: navigator"></div>
+
+  <section>
+    <!-- image -->
+    <div class="image">
+      <div class="cover">
+        <h3>The Singh Hotel</h3>
+        <h5>"Celebrate Luxury, Tradition, and Hospitality at Singh Hotel"</h5>
+        <div class="center">
+          <a th:href="@{~/user/booking}"><button id="btn">Book now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="shortdetails">
+      <div class="about">
+        <h1>About us</h1>
+        <p>Welcome to Hotel, your haven of tranquility in the heart of Nepal's enchanting city. Nestled amidst the breathtaking Himalayan landscape, our hotel offers a perfect blend of comfort and hospitality. Immerse yourself in the warm Nepali culture as you indulge in our delectable local cuisine and explore the wonders of Nepal. Whether it's a leisurely vacation or an adventurous getaway, let Paradise be your home away from home. Come, experience the essence of Nepal with us.</p>
+      </div>
+      <div class="imageDetails">
+        <img th:src="@{~/images/ok/homepage_about.jpg}" alt="Image Not Available">
+      </div>
+    </div>
+
+    <div class="Roominformation">
+      <div class="heading">
+        <h1>Accommodation</h1>
+      </div>
+      <div class="accommodation">
+        <div class="rooms">
+          <a href="http://localhost:8088/rooms/coupleroom" style="display: block; position: relative;">
+            <img th:src="@{~/images/ok/single_bed.jpg}" alt="Single Room" style="display: block; width: 100%;">
+            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              <div class="room-name" style="position: absolute; bottom: 10px; left: 10px;">Single Room</div>
+            </div>
+          </a>
+        </div>
+        <div class="rooms">
+          <a href="http://localhost:8088/rooms/coupleroom" style="display: block; position: relative;">
+            <img th:src="@{~/images/ok/couple_bed.jpg}" alt="Couple Room" style="display: block; width: 100%;">
+            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              <div class="room-name" style="position: absolute; bottom: 10px; left: 10px;">Couple Room</div>
+            </div>
+          </a>
+        </div>
+        <div class="rooms">
+          <a href="http://localhost:8088/rooms/coupleroom" style="display: block; position: relative;">
+            <img th:src="@{~/images/ok/family_bed.jpg}" alt="Family Room" style="display: block; width: 100%;">
+            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              <div class="room-name" style="position: absolute; bottom: 10px; left: 10px;">Family Room</div>
+            </div>
+          </a>
+        </div>
+        <div class="rooms">
+          <a href="http://localhost:8088/rooms/coupleroom" style="display: block; position: relative;">
+            <img th:src="@{~/images/ok/suite_bed.jpg}" alt="Suite Room" style="display: block; width: 100%;">
+            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              <div class="room-name" style="position: absolute; bottom: 10px; left: 10px;">Suite Room</div>
+            </div>
+          </a>
+        </div>
+        <div class="rooms">
+          <a href="http://localhost:8088/rooms/coupleroom" style="display: block; position: relative;">
+            <img th:src="@{~/images/ok/honeymoon_bed.jpg}" alt="Honeymoon Room" style="display: block; width: 100%;">
+            <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              <div class="room-name" style="position: absolute; bottom: 10px; left: 10px;">Honeymoon Room</div>
+            </div>
+          </a>
+        </div>
+
+
+
+        <div class="CheckGallery">
+      <div class="title">
+        <br>
+        <h1>Gallery</h1>
+      </div>
+      <div class="GalleryPic">
+        <img th:src="@{~/images/ok/image_1.jpg}" alt="">
+        <img th:src="@{~/images/ok/image_2.jpg}" alt="">
+        <img th:src="@{~/images/ok/image_3.jpg}" alt="">
+        <img th:src="@{~/images/ok/image_4.jpg}" alt="">
+        <img th:src="@{~/images/ok/image_5.jpg}" alt="">
+        <br>
+        <br>
+      </div>
+    </div>
+
+
+        <div class="reviews">
+          <div class="comments">
+            <h1>Read our Customer Experience</h1>
+            <br>
+          </div>
+          <div class="mainmessage">
+            <div class="messages">
+              <div class="customerdetail">
+                <img th:src="@{~/images/ok/blackwidow.jpg}" alt="">
+                <h3>Black Widow</h3>
+              </div>
+              <p>"I frequently travel for business and always choose to stay at this hotel. The rooms are spacious, clean, and well-equipped with everything I need to work efficiently. The complimentary Wi-Fi is fast and reliable, and the comfortable workspace makes it easy to stay productive. The hotel's convenient location and excellent service make it my go-to choice for business trips.".</p>
+            </div>
+            <div class="messages">
+              <div class="customerdetail">
+                <img th:src="@{~/images/ok/ironman.jpg}" alt="">
+                <h3>Ironman</h3>
+              </div>
+              <p>"My partner and I recently celebrated our anniversary at this hotel, and it was truly unforgettable. The romantic ambiance, luxurious room, and attentive staff made our stay absolutely perfect. We enjoyed a delicious dinner at the hotel's restaurant and spent the evening relaxing in the cozy room. It was the perfect romantic getaway, and we can't wait to return."</p>
+
+            </div>
+            <div class="messages">
+              <div class="customerdetail">
+                <img th:src="@{~/images/ok/batman.jpg}" alt="">
+                <h3>Batman</h3>
+              </div>
+              <p>"Our family had an amazing time staying at this hotel. The spacious family room was perfect for us, and the kids loved the fun activities and amenities available. From the swimming pool to the game room, there was always something to keep the whole family entertained. The staff were friendly and accommodating, and we appreciated the special touches that made our stay extra enjoyable. We'll definitely be back!"</p>
+            </div>
+            <div class="messages">
+              <div class="customerdetail">
+                <img th:src="@{~/images/ok/spiderman.jpg}" alt="">
+                <h3>Spiderman</h3>
+              </div>
+              <p>"The breathtaking views from our room made our stay at this hotel truly unforgettable. Waking up to the sunrise over the mountains was a highlight of our trip. The room was beautifully appointed and provided the perfect space for relaxation. We enjoyed sipping coffee on the balcony and soaking in the tranquil atmosphere. The hotel's serene setting and attentive service made it a memorable retreat.</p>
+
+            </div>
+            <div class="messages">
+              <div class="customerdetail">
+                <img th:src="@{~/images/ok/superman.jpg}" alt="">
+                <h3>Superman</h3>
+              </div>
+              <p>"I recently stayed at this hotel and was blown away by the exceptional service and comfort.
+                From the moment I walked in, I felt welcomed by the friendly staff.
+                The room was beautifully decorated and had all the amenities I needed for a comfortable stay.
+                The location is also perfect, with easy access to nearby attractions.
+                I highly recommend this hotel to anyone looking for a memorable and enjoyable experience."</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <div class="container-fluid contact" id="contact">
+    <div class="container">
+      <form th:method="post" th:action="@{/user/savefeedback}" th:object="${feedback}">
+        <h2>Guest Experience Feedback</h2>
+        <input type="email" placeholder="Email" class="full-half" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required th:field="*{email}" th:value="${feedback.email}">
+        <input type="text" placeholder="Name" class="full-half" required th:field="*{fullname}" th:value="${feedback.fullname}">
+        <input type="text" placeholder="Subject" required th:field="*{subject}" th:value="${feedback.subject}">
+        <textarea placeholder="Message" required th:field="*{message}" th:value="${feedback.message}"></textarea>
+        <input type="submit" onclick="allert()" value="Send">
+      </form>
+    </div>
+  </div>
+
+  <div th:replace="fragments/Footer_frag.html :: footer"></div>
+</section>
+
+<script>
+  function allert() {
+    alert("Successfully Submitted")
+  }
+</script>
+
+<script th:inline="javascript">
+  /* Use Thymeleaf to add "active" class to the current navigation list item */
+  /* Define the active page, for example, "homepage" */
+  var myPage = "homepage";
+
+  /* Get all list-group-item elements */
+  var listGroupItem = document.getElementsByClassName("list-group-item");
+
+  /* Loop through the list items and remove "active" class from all */
+  for (var i = 0; i < listGroupItem.length; i++) {
+    listGroupItem[i].classList.remove("active");
+  }
+
+  /* Find the element with the ID matching the active page and add "active" class */
+  var activeID = document.getElementById(myPage);
+  if (activeID) {
+    activeID.classList.add("active");
+  }
+</script>
+</body>
+
+</html>

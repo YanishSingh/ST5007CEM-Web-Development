@@ -1,0 +1,498 @@
+:root {
+  --primary: #14274a;
+  --secondary: #ff851b;
+  --white: #ffffff;
+  --red: red;
+  --black: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.image {
+  width: 100%;
+  justify-content: center;
+  background-image:  linear-gradient(to bottom, rgb(243, 226, 221), rgba(246, 220, 187, 0.4)),url("../images/ok/homepage_bg.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #bfbff3;
+}
+
+.image .cover h3 {
+  color: black; /* Change font color to black */
+  font-size: 50px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.image .cover h5 {
+  color: black; /* Change font color to black */
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.image .cover p {
+  color: var(--white);
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+
+.booking {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.booking .checkout,
+.booking .checkin,
+.booking .adults,
+.booking .children {
+  width: 250px;
+  padding: 10px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.booking .book button {
+  color: var(--black);
+  border: 0px;
+  margin-top: 30px;
+  margin-left: 30px;
+  flex-wrap: wrap;
+}
+.booking .adults input,
+.booking .children input,
+.booking .checkout input,
+.booking .checkin input {
+  width: 100%;
+  cursor: pointer;
+}
+
+.booking h3 {
+  color: var(--white);
+  font-size: 15px;
+  text-align: center;
+}
+.booking .book button{
+  background:transparent;
+}
+
+.booking .book button a {
+  border: 1px solid black;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.booking .book button a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.shortdetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 110px;
+  margin-bottom: 70px; /* Add margin to create space between sections */
+  position: relative; /* Set parent container position to relative */
+}
+
+.about {
+  flex: 1;
+  max-width: 600px;
+  position: relative; /* Set position to relative */
+  z-index: 1; /* Set z-index to ensure text appears on top of image */
+  padding: 20px; /* Add padding for better readability */
+  backdrop-filter: blur(20px); /* Add glass-like blur effect */
+}
+.imageDetails {
+  width: 100%; /* Set width to 100% to make it take the full width of the page */
+  position: absolute; /* Position the image absolutely */
+  top: 50%; /* Center vertically */
+  left: 0; /* Align the image to the left */
+  transform: translateY(-50%); /* Center the image vertically */
+}
+
+.imageDetails img {
+  width: 100vw; /* Set width to 100% of viewport width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  max-width: none; /* Remove the maximum width limit */
+  max-height: calc(100vh - 180px); /* Set maximum height to 100% of viewport height minus the total margins and paddings */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.imageDetails img:hover {
+  transform: scale(1.1);
+}
+
+.about h1 {
+  font-size: 32px;
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+  text-align: justify;
+}
+.Roominformation .heading {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.Roominformation .accommodation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.Roominformation .accommodation .rooms {
+  width: 400px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.rooms h2{
+  padding-top: 20px;
+}
+
+.Roominformation .accommodation .rooms:hover {
+  border: 0.5px solid black;
+  transform: scale(1.05);
+}
+
+.Roominformation .accommodation .rooms img {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.Roominformation .accommodation .rooms:hover img {
+  transform: scale(1.1);
+}
+
+.Roominformation .accommodation .rooms .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.3s;
+}
+
+.Roominformation .accommodation .rooms:hover .overlay {
+  opacity: 1;
+}
+
+.Roominformation .accommodation .rooms .room-name {
+  color: white;
+  font-size: 24px;
+}
+
+.Roominformation .accommodation .rooms button {
+  background: transparent;
+  cursor: pointer;
+}
+
+.Roominformation .accommodation .rooms button a {
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 20px;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.Roominformation .accommodation .rooms button a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.CheckGallery {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.CheckGallery .title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.CheckGallery h1 {
+  font-size: 30px;
+}
+
+.CheckGallery .GalleryPic {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.CheckGallery .GalleryPic img {
+  height: 272px;
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.CheckGallery .GalleryPic img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.CheckGallery .GalleryPic img {
+  animation: fadeIn 1s;
+}
+
+.CheckGallery .GalleryPic img {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.CheckGallery .GalleryPic img {
+  margin: 10px;
+}
+
+
+.reviews {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.reviews .comments h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reviews .mainmessage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.reviews .messages {
+  width: 350px;
+  font-size: 16px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.reviews .messages p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #444;
+  padding:10px;
+}
+
+.reviews .messages .customerdetail {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reviews .messages img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out; /* Apply the fade-in animation */
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
+}
+
+/* Add a scaling and rotating effect on hover */
+.reviews .messages img:hover {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.reviews .messages h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.reviews .messages:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+
+
+@media (max-width: 1000px) {
+  .booking .checkout,
+  .booking .checkin,
+  .booking .adults,
+  .booking .children {
+    width: 20%;
+  }
+}
+
+@media (max-width: 670px) {
+  .booking .checkout,
+  .booking .checkin,
+  .booking .adults,
+  .booking .children {
+    width: 35%;
+  }
+}
+
+
+.container-fluid {
+  padding: 0 1em;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 996px;
+  padding: 5em 0;
+  padding-top: 1vh;
+}
+
+.container h2 {
+  padding: 20px;
+}
+
+.contact {
+  text-align: center;
+  padding: 5em 0;
+}
+
+.contact form {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  border-top: 8px solid var(--secondary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  padding: 1em;
+}
+
+.contact form input,
+.contact form textarea {
+  border: none;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 100%;
+}
+
+.contact form textarea {
+  height: 6em;
+}
+
+.contact form input[type="submit"] {
+  background-color: var(--secondary);
+  border-radius: 0;
+  color: #fff;
+  padding: 1em;
+  text-transform: uppercase;
+  cursor: pointer; /* Add cursor pointer to indicate interactivity */
+  transition: background-color 0.3s, transform 0.2s; /* Adding smooth transitions */
+}
+
+.contact form input[type="submit"]:hover {
+  background-color: #000000;
+  transform: scale(1.1);
+  color: white;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form input[type="submit"] {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact form input,
+.contact form textarea,
+.contact form input[type="submit"] {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+/* Add some color and background to the input fields when they are focused */
+.contact form input:focus,
+.contact form textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+  background-color: #f9f9f9;
+}

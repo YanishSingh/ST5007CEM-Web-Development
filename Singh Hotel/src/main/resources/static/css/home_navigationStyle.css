@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: montserrat;
+}
+nav {
+  background: #ff851b;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.logo img {
+  width: 150px; /* Set the width of the logo */
+  height: 32px; /* Set the height of the logo */
+  margin-left:20px;
+  margin-top: 25px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 40px;
+  align-items: center;
+
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+nav ul button {
+  background: transparent;
+  border: 0px;
+  padding-left: 40px;
+  cursor: pointer;
+
+}
+
+nav ul button a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+nav ul a.active,
+nav ul a:hover,
+.dropdown:hover {
+  background:#ff851b ;
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.dropbtn {
+  color: white;
+  padding: 7px 13px;
+  font-size: 17px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ff851b;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-transform: capitalize;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 7px 13px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 863px) {
+  .checkbtn {
+    display: block;
+  }
+  nav ul {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  /* nav ul button {
+    display: block;
+    margin: auto;
+    line-height: 30px;
+  } */
+  nav ul button a {
+    font-size: 20px;
+  }
+
+  nav a:hover,
+  nav a.active {
+    background: none;
+    color: #090a0a;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}

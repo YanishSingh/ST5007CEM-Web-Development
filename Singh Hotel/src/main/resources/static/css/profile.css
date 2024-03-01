@@ -1,0 +1,97 @@
+/* Styling for the section */
+.py-5 {
+    padding: 3rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* Styling for the h1 heading */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+/* Styling for the background and rounded edges of the form */
+.bg-white {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    padding: 15px;
+    margin: 2%;
+}
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+.p-4{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+}
+/* Styling for the profile tab navigation */
+.profile-tab-nav {
+    width: 20%;
+    min-width: 200px;
+    border-right: 1px solid #e9ecef;
+}
+/* Styling for the image and username text in the profile tab navigation */
+.img-circle {
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+.mb-4{
+    margin: 10px;
+}
+.row{
+    margin: 5px;
+    margin-bottom: 30px;
+}
+.col-md-6{
+    margin: 8px;
+    height: 70px;
+}
+.form-group{
+    margin: 8px;
+    display: grid;
+
+}
+
+/* Styling for the form in the tab content */
+.form-control {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #e9ecef;
+}
+
+
+button[type="submit"]{
+    background-color: #f6dac9;
+    color: #000000;
+    border-radius:10px;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #e9ecef;
+}
+button[type="submit"]:hover{
+    background-color: #ff851b;
+    color: #ffffff;
+    box-shadow: 1px 2px 35px rgba(245, 243, 243, 0.75);
+}
